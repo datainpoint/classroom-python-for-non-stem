@@ -7566,17 +7566,6 @@ main {
 </div>
 </div>
 </div></section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=therapeutic-toolbox">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="%E7%9B%AE%E5%89%8D%E9%82%84%E6%B2%92%E6%9C%89%E8%BC%89%E5%85%A5%E6%A8%99%E6%BA%96/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E7%B5%84%E5%87%BD%E6%95%B8%E7%9A%84%E9%9C%80%E6%B1%82">目前還沒有載入標準/第三方模組函數的需求<a class="anchor-link" href="#%E7%9B%AE%E5%89%8D%E9%82%84%E6%B2%92%E6%9C%89%E8%BC%89%E5%85%A5%E6%A8%99%E6%BA%96/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E7%B5%84%E5%87%BD%E6%95%B8%E7%9A%84%E9%9C%80%E6%B1%82">¶</a></h2><p>之後在「使用模組包裝函數與類別」章節會說明。</p>
-</div>
-</div>
-</div>
-</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=micro-martial">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8102,7 +8091,8 @@ main {
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="n">middle_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="n">middle_index</span><span class="p">]</span>
 <span class="k">def</span> <span class="nf">calculate_median</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">middle_elements</span> <span class="o">=</span> <span class="n">retrieve_middle_elements</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># use retrieve_middle_elements() to get middle elements</span>
+    <span class="n">sorted_x</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">middle_elements</span> <span class="o">=</span> <span class="n">retrieve_middle_elements</span><span class="p">(</span><span class="n">sorted_x</span><span class="p">)</span> <span class="c1"># use retrieve_middle_elements() to get middle elements</span>
     <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">middle_elements</span><span class="p">)</span> <span class="o">==</span> <span class="nb">tuple</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">middle_elements</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="k">else</span><span class="p">:</span>
