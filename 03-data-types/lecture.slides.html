@@ -7720,7 +7720,7 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convert_fahrenheit_to_celsius</span><span class="p">(</span><span class="n">fahrenheit</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">convert_fahrenheit_to_celsius</span><span class="p">(</span><span class="n">fahrenheit</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="n">celsius</span> <span class="o">=</span> <span class="p">(</span><span class="n">fahrenheit</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span>  <span class="c1"># the formula converts fahrenheit to celsius.</span>
     <span class="k">return</span> <span class="n">celsius</span>
 
@@ -8175,7 +8175,7 @@ power(x, n)
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">say_hello_to_anyone</span><span class="p">(</span><span class="n">anyone</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">say_hello_to_anyone</span><span class="p">(</span><span class="n">anyone</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="k">return</span> <span class="s2">"Hello, "</span> <span class="o">+</span> <span class="n">anyone</span> <span class="o">+</span> <span class="s2">"!"</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">say_hello_to_anyone</span><span class="p">(</span><span class="s2">"world"</span><span class="p">))</span>
@@ -8230,7 +8230,7 @@ Hello, Python!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">say_hello_to_anyone</span><span class="p">(</span><span class="n">anyone</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">say_hello_to_anyone</span><span class="p">(</span><span class="n">anyone</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="k">return</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">anyone</span><span class="si">}</span><span class="s2">!"</span> <span class="c1"># f-string syntax</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">say_hello_to_anyone</span><span class="p">(</span><span class="s2">"world"</span><span class="p">))</span>
@@ -8276,7 +8276,7 @@ Hello, Python!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">fahrenheit</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">fahrenheit</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="n">celsius</span> <span class="o">=</span> <span class="p">(</span><span class="n">fahrenheit</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">9</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fahrenheit</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> degrees fahrenheit is equal to </span><span class="si">{</span><span class="n">celsius</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> degrees celsius."</span>
     <span class="k">return</span> <span class="n">msg</span>
@@ -8310,7 +8310,7 @@ Hello, Python!
 <div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">big_mac_index</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">currency</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">big_mac_index</span><span class="p">(</span><span class="n">country</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"A Big Mac costs </span><span class="si">{</span><span class="n">price</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">currency</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">."</span>
     <span class="k">return</span> <span class="n">msg</span>
 
